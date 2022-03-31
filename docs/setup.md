@@ -4,3 +4,5 @@
 4. `npx nx g @nrwl/nest:app server`
 5. `npm i @nestjs/graphql @nestjs/apollo graphql apollo-server-express`
 6. setup `graphqlRootModule` in `apps/server/src/app/app.module.ts`
+7. `npm i --save-dev @nestjs/cli`
+8. `cd apps/server/src/app/modules` and `npx nest g resource post`
