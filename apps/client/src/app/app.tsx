@@ -17,7 +17,7 @@ const SEARCH_POSTS = gql`
 `;
 
 export function App() {
-  const [keyword, setKeyword] = useState(KEYWORD.react);
+  const [keyword, setKeyword] = useState('');
   const { loading, data } = useQuery(SEARCH_POSTS, {
     variables: { keyword },
   });
@@ -25,8 +25,9 @@ export function App() {
   return (
     <>
       <div style={{ background: '#ff45008c', marginBottom: 12 }}>
-        Loading time: react = 3s, js = 2s, ts = 1s
+        Loading time: react = 1s, js = 5s, ts = 10s
       </div>
+
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         <div>
           {Object.entries(KEYWORD).map(([key, value]) => (
@@ -45,20 +46,22 @@ export function App() {
             </div>
           ))}
         </div>
-        <div
-          style={{
-            marginLeft: 40,
-            width: '100%',
-            display: 'flex',
-            flexDirection: 'column',
-          }}
-        >
-          {loading && <h3>Loading {keyword} ...</h3>}
-          {!loading &&
-            data.searchPosts.map((post: { title: string }) => (
-              <p>{post.title}</p>
-            ))}
-        </div>
+        {keyword !== '' && (
+          <div
+            style={{
+              marginLeft: 40,
+              width: '100%',
+              display: 'flex',
+              flexDirection: 'column',
+            }}
+          >
+            {loading && <h3>Loading {keyword} ...</h3>}
+            {!loading &&
+              data.searchPosts.map((post: { title: string }) => (
+                <p>{post.title}</p>
+              ))}
+          </div>
+        )}
       </div>
     </>
   );

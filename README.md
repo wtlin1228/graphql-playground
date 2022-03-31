@@ -9,7 +9,9 @@ This project was generated using [Nx](https://nx.dev).
 ## Quick Start
 
 1. `npm i`
-2. `npm start`
+2. `npm start server`
+3. `npm start client`
+4. open http://localhost:4200/
 
 ## Adding capabilities to your workspace
 

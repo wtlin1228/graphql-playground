@@ -27,11 +27,11 @@ export class PostService {
     }
 
     if (title === 'JavaScript') {
-      await sleep(2);
+      await sleep(5);
     }
 
     if (title === 'TypeScript') {
-      await sleep(3);
+      await sleep(10);
     }
 
     return [
