@@ -3,6 +3,10 @@ import { Injectable } from '@nestjs/common';
 import { CreatePostInput } from './dto/create-post.input';
 import { UpdatePostInput } from './dto/update-post.input';
 
+function sleep(s) {
+  return new Promise((resolve) => setTimeout(resolve, s * 1000));
+}
+
 @Injectable()
 export class PostService {
   create(createPostInput: CreatePostInput) {
@@ -17,7 +21,19 @@ export class PostService {
     return `This action returns a #${id} post`;
   }
 
-  search(title: string) {
+  async search(title: string) {
+    if (title === 'React') {
+      await sleep(1);
+    }
+
+    if (title === 'JavaScript') {
+      await sleep(2);
+    }
+
+    if (title === 'TypeScript') {
+      await sleep(3);
+    }
+
     return [
       {
         id: uuidv4(),

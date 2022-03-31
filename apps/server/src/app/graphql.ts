@@ -23,7 +23,7 @@ export interface Post {
 export interface IQuery {
     posts(): Nullable<Post>[] | Promise<Nullable<Post>[]>;
     post(id: number): Nullable<Post> | Promise<Nullable<Post>>;
-    searchPost(keyword?: Nullable<string>): Nullable<Post>[] | Promise<Nullable<Post>[]>;
+    searchPosts(keyword?: Nullable<string>): Nullable<Post>[] | Promise<Nullable<Post>[]>;
 }
 
 export interface IMutation {

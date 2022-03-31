@@ -22,7 +22,7 @@ export class PostResolver {
     return this.postService.findOne(id);
   }
 
-  @Query('searchPost')
+  @Query('searchPosts')
   search(@Args('keyword') keyword: string) {
     return this.postService.search(keyword);
   }

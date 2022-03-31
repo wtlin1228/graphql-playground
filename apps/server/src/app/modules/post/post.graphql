@@ -15,7 +15,7 @@ input UpdatePostInput {
 type Query {
   posts: [Post]!
   post(id: Int!): Post
-  searchPost(keyword: String): [Post]!
+  searchPosts(keyword: String): [Post]!
 }
 
 type Mutation {
