@@ -1,6 +1,6 @@
 type Post {
-  # Example field (placeholder)
-  exampleField: Int
+  id: ID!
+  title: String!
 }
 
 input CreatePostInput {
@@ -13,8 +13,9 @@ input UpdatePostInput {
 }
 
 type Query {
-  post: [Post]!
+  posts: [Post]!
   post(id: Int!): Post
+  searchPost(keyword: String): [Post]!
 }
 
 type Mutation {

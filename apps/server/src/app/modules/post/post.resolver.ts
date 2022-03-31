@@ -12,7 +12,7 @@ export class PostResolver {
     return this.postService.create(createPostInput);
   }
 
-  @Query('post')
+  @Query('posts')
   findAll() {
     return this.postService.findAll();
   }
@@ -20,6 +20,11 @@ export class PostResolver {
   @Query('post')
   findOne(@Args('id') id: number) {
     return this.postService.findOne(id);
+  }
+
+  @Query('searchPost')
+  search(@Args('keyword') keyword: string) {
+    return this.postService.search(keyword);
   }
 
   @Mutation('updatePost')

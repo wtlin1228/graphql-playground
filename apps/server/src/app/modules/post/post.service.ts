@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 import { Injectable } from '@nestjs/common';
 import { CreatePostInput } from './dto/create-post.input';
 import { UpdatePostInput } from './dto/update-post.input';
@@ -14,6 +15,27 @@ export class PostService {
 
   findOne(id: number) {
     return `This action returns a #${id} post`;
+  }
+
+  search(title: string) {
+    return [
+      {
+        id: uuidv4(),
+        title: `${title} - ${1}`,
+      },
+      {
+        id: uuidv4(),
+        title: `${title} - ${2}`,
+      },
+      {
+        id: uuidv4(),
+        title: `${title} - ${3}`,
+      },
+      {
+        id: uuidv4(),
+        title: `${title} - ${4}`,
+      },
+    ];
   }
 
   update(id: number, updatePostInput: UpdatePostInput) {
