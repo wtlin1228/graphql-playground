@@ -32,8 +32,6 @@ const SearchPosts = ({ keyword }: { keyword: string }) => {
     }
   );
 
-  console.log(data);
-
   return (
     <Result
       keyword={keyword}
