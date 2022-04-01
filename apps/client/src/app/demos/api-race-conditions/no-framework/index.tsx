@@ -56,7 +56,9 @@ export default function NoFrameworkDemo() {
 
   return (
     <>
-      <h1 style={{ borderTop: 'solid 2px black' }}>No Framework</h1>
+      <h1 style={{ paddingTop: 22, borderTop: 'solid 2px black' }}>
+        No Framework
+      </h1>
 
       <div style={{ background: '#ff45008c', marginBottom: 12 }}>
         Loading time: react = 1s, js = 5s, ts = 10s
