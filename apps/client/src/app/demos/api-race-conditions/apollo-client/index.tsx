@@ -42,6 +42,8 @@ export default function ApolloClientDemo() {
 
   return (
     <ApolloProvider client={client}>
+      <h1 style={{ borderTop: 'solid 2px black' }}>Apollo Client</h1>
+
       <div style={{ background: '#ff45008c', marginBottom: 12 }}>
         Loading time: react = 1s, js = 5s, ts = 10s
       </div>

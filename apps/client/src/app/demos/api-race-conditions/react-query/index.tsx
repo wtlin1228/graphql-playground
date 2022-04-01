@@ -6,6 +6,10 @@ import Nav from '../Nav';
 import Result from '../Result';
 
 const endpoint = 'http://localhost:3333/graphql';
+const queryClient = new QueryClient({
+  defaultOptions: { queries: { retry: false, refetchOnWindowFocus: false } },
+});
+
 const searchPosts = (keyword: string) =>
   request(
     endpoint,
@@ -18,10 +22,6 @@ const searchPosts = (keyword: string) =>
       }
     `
   );
-
-const queryClient = new QueryClient({
-  defaultOptions: { queries: { retry: false, refetchOnWindowFocus: false } },
-});
 
 const SearchPosts = ({ keyword }: { keyword: string }) => {
   const { status, data } = useQuery(
@@ -48,6 +48,8 @@ export default function ReactQueryDemo() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <h1 style={{ borderTop: 'solid 2px black' }}>React Query</h1>
+
       <div style={{ background: '#ff45008c', marginBottom: 12 }}>
         Loading time: react = 1s, js = 5s, ts = 10s
       </div>
