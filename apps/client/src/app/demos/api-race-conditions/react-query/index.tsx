@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useQuery, QueryClient, QueryClientProvider } from 'react-query';
+// import { ReactQueryDevtools } from 'react-query/devtools';
 import { request, gql } from 'graphql-request';
 
 import Nav from '../Nav';
@@ -58,6 +59,8 @@ export default function ReactQueryDemo() {
         <Nav setKeyword={setKeyword} />
         <SearchPosts keyword={keyword} />
       </div>
+
+      {/* <ReactQueryDevtools /> */}
     </QueryClientProvider>
   );
 }

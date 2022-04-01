@@ -51,13 +51,13 @@ const SearchPosts = ({ keyword }: { keyword: string }) => {
   return <Result keyword={keyword} loading={loading} posts={posts} />;
 };
 
-export default function NoFrameworkDemo() {
+export default function NoLibraryDemo() {
   const [keyword, setKeyword] = useState('');
 
   return (
     <>
       <h1 style={{ paddingTop: 22, borderTop: 'solid 2px black' }}>
-        No Framework
+        No Library
       </h1>
 
       <div style={{ background: '#ff45008c', marginBottom: 12 }}>
