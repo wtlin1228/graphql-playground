@@ -13,6 +13,10 @@ This project was generated using [Nx](https://nx.dev).
 3. `npm start client`
 4. open http://localhost:4200/
 
+## Demos
+
+1. API request race conditions (see my [blog post](https://leonerd.gatsbyjs.io/0021-api-request-race-conditions/))
+
 ## Adding capabilities to your workspace
 
 Nx supports many plugins which add capabilities for developing different types of applications and different tools.
