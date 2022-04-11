@@ -1,8 +1,8 @@
-import ReduxSagaDemo from './demos/api-race-conditions/redux-saga';
-import ReduxObservableDemo from './demos/api-race-conditions/redux-observable';
-import ApolloClientDemo from './demos/api-race-conditions/apollo-client';
-import ReactQueryDemo from './demos/api-race-conditions/react-query';
-import NoLibraryDemo from './demos/api-race-conditions/no-library';
+import ReduxSagaDemo from './redux-saga';
+import ReduxObservableDemo from './redux-observable';
+import ApolloClientDemo from './apollo-client';
+import ReactQueryDemo from './react-query';
+import NoLibraryDemo from './no-library';
 
 export function App() {
   return (
