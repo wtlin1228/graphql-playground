@@ -10,7 +10,7 @@ This project was generated using [Nx](https://nx.dev).
 
 1. `npm i`
 2. `npm start server`
-3. `npm start client`
+3. `npm start client-demo-api-race-conditions`
 4. open http://localhost:4200/
 
 ## Demos
