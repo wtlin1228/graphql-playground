@@ -1,7 +1,7 @@
 {
   "version": 2,
   "projects": {
-    "client": "apps/client",
+    "client-demo-api-race-conditions": "apps/client-demo-api-race-conditions",
     "server": "apps/server"
   }
 }

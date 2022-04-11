@@ -6,3 +6,4 @@
 6. setup `graphqlRootModule` in `apps/server/src/app/app.module.ts`
 7. `npm i --save-dev @nestjs/cli`
 8. `cd apps/server/src/app/modules` and `npx nest g resource post`
+9. rename `apps/client` to `apps/client-demo-api-race-conditions` by `npx nx g @nrwl/workspace:move --project client client-demo-api-race-conditions`
